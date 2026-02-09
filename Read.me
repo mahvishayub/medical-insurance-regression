@@ -1,0 +1,142 @@
+Medical Insurance Cost Prediction using Multiple Linear Regression
+Overview
+
+This project implements a Multiple Linear Regression model from scratch using
+Gradient Descent with L2 regularization (Ridge) to predict medical insurance
+charges. The custom implementation is validated by comparing its performance with
+scikit-learn’s LinearRegression model.
+
+The project demonstrates a complete regression workflow including data
+preprocessing, optimization, convergence analysis, evaluation, and model saving.
+
+Dataset
+
+The dataset used is the Medical Insurance dataset, which contains demographic
+and lifestyle information used to estimate insurance charges.
+
+Features:
+
+Age
+
+Sex
+
+BMI
+
+Number of children
+
+Smoker status
+
+Region
+
+Target variable: charges
+
+The dataset is stored in the data/ directory.
+
+Methodology
+1. Data Preprocessing
+
+Selected relevant numerical and categorical features
+
+Applied one-hot encoding to categorical variables
+
+Split data into 80% training and 20% testing
+
+Standardized features using StandardScaler
+
+2. From-Scratch Regression Model
+
+The regression model was implemented manually using NumPy and includes:
+
+Hypothesis function
+
+Mean Squared Error cost function
+
+L2 regularization (Ridge)
+
+Gradient computation
+
+Gradient Descent optimization
+
+Training was performed for 80,000 iterations with:
+
+Learning rate (α): 0.01
+
+Regularization parameter (λ): 0.001
+
+Convergence Analysis
+
+A convergence curve (Cost vs Iterations) shows a rapid decrease in cost during the
+early iterations followed by stabilization, confirming correct learning behavior
+and convergence of the model parameters.
+
+The convergence plot is saved in the figures/ directory.
+
+Model Evaluation and Comparison
+Model	Mean Squared Error (MSE)
+From-scratch (Gradient Descent + L2)	~33.9 million
+scikit-learn LinearRegression	~33.8 million
+
+The close agreement between the two models validates the correctness of the
+from-scratch implementation.
+
+Discussion
+
+Feature scaling was essential for stable and efficient convergence.
+
+L2 regularization improved robustness by reducing overfitting.
+
+The learning rate provided a good balance between speed and stability.
+
+Results show that the manually implemented model performs comparably to
+scikit-learn’s optimized implementation.
+
+Saved Artifacts
+
+The following artifacts are saved in the models/ directory:
+
+Learned regression parameters (theta)
+
+Feature scaler
+
+Trained scikit-learn regression model
+
+These can be reused for inference or further experimentation.
+
+Project Structure
+medical-insurance-regression/
+├── data/
+│   └── Medical Insurance.csv
+├── notebooks/
+│   └── Medical_Insurance_Regression.ipynb
+├── src/
+│   └── gradient_descent_regression.py
+├── models/
+│   └── medical_insurance_regression.joblib
+├── figures/
+│   └── convergence_curve.png
+└── README.md
+
+Requirements
+
+Python 3.10+
+
+Main libraries:
+
+NumPy
+
+Pandas
+
+Matplotlib
+
+scikit-learn
+
+Joblib
+
+Install dependencies:
+
+pip install numpy pandas matplotlib scikit-learn joblib
+
+Author
+
+Mahvish Ayub
+

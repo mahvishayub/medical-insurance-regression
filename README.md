@@ -1,13 +1,13 @@
 # Medical Insurance Cost Prediction using Linear Regression
 
-## 📌 Project Overview
+## Project Overview
 This project focuses on predicting medical insurance costs based on individual demographic and health-related factors using Linear Regression. The objective is to analyze how features such as age, BMI, smoking status, and region influence insurance charges.
 
 The project demonstrates a complete machine learning workflow, including data exploration, preprocessing, model training, evaluation, and interpretation.
 
 ---
 
-## 📊 Dataset Description
+## Dataset Description
 The dataset includes the following features:
 
 - **age**: Age of the individual
@@ -20,7 +20,7 @@ The dataset includes the following features:
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. Exploratory Data Analysis (EDA)
 - Inspected data distributions
@@ -44,14 +44,14 @@ The model performance was evaluated using:
 
 ---
 
-## 📈 Results & Insights
+## Results & Insights
 - Smoking status and BMI were found to significantly impact insurance charges
 - Linear Regression provided an interpretable baseline model
 - The model performs reasonably well for insurance cost estimation
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 - Python
 - Pandas
 - NumPy
